@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.logo
+{
+    width: 200px;
+}
+.Nav-bar
+{
+    padding: 0px 20px;
+}
+.Nav-bar > ul
+{
+    display: flex;
+    font-size: 24px;
+    list-style-type: none;
+}
+.Nav-bar>ul>li
+{
+    padding: 10px;
+    margin : 10px;
+}
