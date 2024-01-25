@@ -607,18 +607,16 @@ const cardobj = [{
 }];
 
 const Body = () => {
-    return (
-        <div className="body" >
-            <div className="search" >Search Bar</div>
-            <div className="res-container" >
-                <Restaurentcard resdata = {cardobj}/>
-                <Restaurentcard resname="Sangrila" cuisine="North-East, Momos,Fried Rice" rating="5.0" deliverytime="30 mins"/>
-                <Restaurentcard/>
-                <Restaurentcard/>
-                <Restaurentcard/>
-            </div>
-        </div>
-    );
+  return (
+      <div className="body" >
+          <div className="search" >Search Bar</div>
+          <div className="res-container" >
+              {cardobj.map((restaurant, index) => (
+                  <Restaurentcard key={index} resdata={restaurant}/>
+              ))}
+          </div>
+      </div>
+  );
 };
 
 // main div tag 
