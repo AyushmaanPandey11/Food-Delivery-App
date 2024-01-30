@@ -46,7 +46,7 @@
 .res-card:hover
 {
     cursor: pointer;
-    border : 2px solid black;
+    border : 2px normal black;
     padding: 5px;
     border-radius: 15px;
 
