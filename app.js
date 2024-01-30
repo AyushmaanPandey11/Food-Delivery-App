@@ -22,14 +22,15 @@ const Header = () => {
 
 const Restaurentcard = (prop) => {
   const { resdata } = prop;
+  const { cloudinaryImageId, name, cuisines, avgRating,costForTwo } = resdata?.info;
     return (
         <div className="res-card" >
             <img className="res-logo" alt="restaurent logo" 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3sbDbh1CFfkBLFCL2XWW2M84Elff1wX40a-koRbhKEA&s"/> 
-            <h3>{resdata.info.name}</h3>
-            <h4>{resdata.info.cuisines}</h4>
-            <h4>Rating: {resdata.info.avgRating}</h4>
-            <h4>costForTwo: {resdata.info.costForTwo}</h4>
+                src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/> 
+            <h3>{name}</h3>
+            <h4>{cuisines}</h4>
+            <h4>Rating: {avgRating}</h4>
+            <h4>costForTwo: {costForTwo}</h4>
         </div>
     );
 };
