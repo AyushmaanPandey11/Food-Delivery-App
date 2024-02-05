@@ -67,3 +67,18 @@
 {
     margin-bottom: 5px;
 }
+.filter-btn
+{
+    height: 30px;
+    width: 150px;
+    margin: 5px;
+    padding: 5px; 
+    background-color: coral;
+    border-width: 0cap;
+}
+.filter-btn:hover
+{
+    cursor: pointer;
+    border: 2px black normal;
+    border-radius: 10px;
+}
