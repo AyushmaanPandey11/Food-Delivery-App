@@ -9,8 +9,9 @@ const Body = () => {
     const fetchdata = async () => {
       const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4399295&lng=78.4982741&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       const json = data.json();
-      // setlistofRes(json?.data?.cards?.card[4]?.card?.card?.gridElements?.restaurants);
-      // setoriginalList(json?.data?.cards?.card[4]?.card?.card?.gridElements?.restaurants);
+      console.log(json);
+      setfilteredlistofRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setoriginalList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     const resetList = () => {
       setfilteredlistofRes(originalList);
