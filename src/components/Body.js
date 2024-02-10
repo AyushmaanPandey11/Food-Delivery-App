@@ -2,7 +2,7 @@ import Restaurantcard  from "./Restaurantcard";
 import { useEffect,useState} from "react";
 //import cardobj from "../utils/mockData";
 import Shimmer from "./Shimmer";
-import { SWIGGY_API } from "../utils/constants";
+import { SWIGGY_API,SWIGGY_UPDATEAPI } from "../utils/constants";
 const Body = () => {
     const [originalList,setoriginalList] = useState([]); // just to store the original values 
     const [filteredlistofRes, setfilteredlistofRes] = useState(originalList); // used to in functions as it will keep changin afte events
@@ -19,7 +19,7 @@ const Body = () => {
     
     //Post api call for more restaurent cards
     const fetchpostdata = async () => {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/update", {
+      const data = await fetch(SWIGGY_UPDATEAPI, {
         method : "POST",
         headers : { "Content-type" : "application/json" },
         body : JSON.Stringify(data),
