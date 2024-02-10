@@ -9,7 +9,7 @@ const Body = () => {
     const [searchText, setsearchText] = useState([]);
     const [originalpostList,setoriginalpostList] = useState([]);
     const [filteredpostList,setfilteredpostList] = useState(originalpostList);
-    useEffect( ()=>{fetchdata(),fetchpostdata()} ,[]);
+    useEffect( ()=>{fetchdata()} ,[]);
     const fetchdata = async () => {
       const data = await fetch(SWIGGY_API);
       const json = await data.json();
@@ -18,16 +18,16 @@ const Body = () => {
     };
     
     //Post api call for more restaurent cards
-    const fetchpostdata = async () => {
-      const data = await fetch(SWIGGY_UPDATEAPI, {
-        method : "POST",
-        headers : { "Content-type" : "application/json" },
-        body : JSON.Stringify(data),
-      } );
-      // const updatejson = await data.json();
-      // setoriginalpostList(updatejson?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      // setfilteredpostList(updatejson?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    };
+    // const fetchpostdata = async () => {
+    //   const data = await fetch(SWIGGY_UPDATEAPI, {
+    //     method : "POST",
+    //     headers : { "Content-type" : "application/json" },
+    //     body : JSON.Stringify(data),
+    //   } );
+    //   // const updatejson = await data.json();
+    //   // setoriginalpostList(updatejson?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    //   // setfilteredpostList(updatejson?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // };
     
     const resetList = () => {
       setfilteredlistofRes(originalList);
@@ -75,6 +75,11 @@ const Body = () => {
                     ) )
                   }
             </div> */}
+            <div className="MoreRes-btn">
+              <button  > 
+                More
+              </button>
+            </div>
         </div>
     );
   };
