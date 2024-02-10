@@ -7,6 +7,10 @@
 {
     background-color: #f0f0f0;
 }
+.body
+{
+    margin: 10px 15px;
+}
 .header
 {
     display: flex;
@@ -56,7 +60,7 @@
     margin: 5px;
     margin-bottom: 5px;
     padding: 15px;
-    width: 210px;
+    width: 200px;
     
 }
 .res-card:hover

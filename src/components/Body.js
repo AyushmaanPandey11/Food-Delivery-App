@@ -2,17 +2,33 @@ import Restaurantcard  from "./Restaurantcard";
 import { useEffect,useState} from "react";
 //import cardobj from "../utils/mockData";
 import Shimmer from "./Shimmer";
+import { SWIGGY_API } from "../utils/constants";
 const Body = () => {
     const [originalList,setoriginalList] = useState([]); // just to store the original values 
     const [filteredlistofRes, setfilteredlistofRes] = useState(originalList); // used to in functions as it will keep changin afte events
     const [searchText, setsearchText] = useState([]);
-    useEffect( ()=>{fetchdata()} ,[]);
+    const [originalpostList,setoriginalpostList] = useState([]);
+    const [filteredpostList,setfilteredpostList] = useState(originalpostList);
+    useEffect( ()=>{fetchdata(),fetchpostdata()} ,[]);
     const fetchdata = async () => {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4399295&lng=78.4982741&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const data = await fetch(SWIGGY_API);
       const json = await data.json();
       setfilteredlistofRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       setoriginalList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    }
+    };
+    
+    //Post api call for more restaurent cards
+    const fetchpostdata = async () => {
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/update", {
+        method : "POST",
+        headers : { "Content-type" : "application/json" },
+        body : JSON.Stringify(data),
+      } );
+      // const updatejson = await data.json();
+      // setoriginalpostList(updatejson?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      // setfilteredpostList(updatejson?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    };
+    
     const resetList = () => {
       setfilteredlistofRes(originalList);
     }
@@ -46,10 +62,19 @@ const Body = () => {
               </button>
             </div>
             <div className="res-container" >
-                { filteredlistofRes.map((restaurant) => (
+                { 
+                  filteredlistofRes.map((restaurant) => (
                   <Restaurantcard key = { restaurant?.info?.id} resdata={restaurant}/>
-                )) }
+                  )) 
+                }
             </div>
+            {/* <div className="res-container" >
+                  {
+                    filteredpostList.map( (res)=>( 
+                      <Restaurantcard key={ res?.info?.id } resdata={res}/>
+                    ) )
+                  }
+            </div> */}
         </div>
     );
   };
