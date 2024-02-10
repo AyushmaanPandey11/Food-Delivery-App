@@ -50,19 +50,25 @@
 }
 .res-container
 {
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0px;
-    justify-content: center;
+    margin-left:  17%;
+    margin-right: 20%;
+    
 }
 .res-card
 {
-    background-color: pink;
-    margin: 5px;
+    background-color: transparent;
+    margin: 20px;
     margin-bottom: 5px;
     padding: 15px;
     width: 200px;
     
+}
+.res-card>img
+{
+    border-radius: 5px;
 }
 .res-card:hover
 {
