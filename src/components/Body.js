@@ -12,8 +12,8 @@ const Body = () => {
     const fetchdata = async () => {
       const data = await fetch(SWIGGY_API);
       const json = await data.json();
-      setfilteredlistofRes(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setoriginalList(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setfilteredlistofRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setoriginalList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     // reset button 
     const resetList = () => {
