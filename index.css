@@ -3,10 +3,6 @@
     margin : 0px;
     border-width: 0cap;
 }
-.app
-{
-    background-color: #f0f0f0;
-}
 .body
 {
     margin: 10px 15px;
@@ -33,10 +29,14 @@
 }
 .Nav-Bar > ul
 {
+    text-decoration: none;
     display: flex;
     font-size: 24px;
     list-style-type: none;
     padding-top: 60px;
+}
+.Navbar-Bar:focus,.Navbar-Bar:active {
+  color: inherit; 
 }
 .Nav-Bar>ul>li
 {
@@ -47,6 +47,34 @@
 .Nav-Bar>ul>li:hover
 {
     cursor: pointer;
+}
+.food-carousel-container
+{
+    margin-top: 10px;
+}
+.food-carousel-container>h2
+{
+    margin-left: 310px;
+}
+.food-carousel
+{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    margin-right: 10%;
+}
+.Carousel-Card>img
+{
+    cursor: pointer;
+    border: 0px;
+    width: 140px;
+    height: 140px;
+
+}
+.resCards>h2
+{
+    margin-left: 310px;
 }
 .res-container
 {

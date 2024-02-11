@@ -1,10 +1,13 @@
 import Restaurantcard  from "./Restaurantcard";
+import Foodcarousel from "./Foodcarousel";
 import { useEffect,useState} from "react";
 import Shimmer from "./Shimmer";
 import { SWIGGY_API } from "../utils/constants";
+import { Link } from "react-router-dom";
 const Body = () => {
     const [originalList,setoriginalList] = useState([]); // just to store the original values 
     const [filteredlistofRes, setfilteredlistofRes] = useState([]); // used to in functions as it will keep changin afte events
+    const [foodcarousel,setfoodcarousel] = useState([]);
     const [searchText, setsearchText] = useState([]);
 
     // fetching data from swiggy api
@@ -12,8 +15,9 @@ const Body = () => {
     const fetchdata = async () => {
       const data = await fetch(SWIGGY_API);
       const json = await data.json();
-      setfilteredlistofRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setoriginalList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setfoodcarousel(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info);
+      setfilteredlistofRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setoriginalList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     // reset button 
     const resetList = () => {
@@ -34,7 +38,7 @@ const Body = () => {
       )
       setfilteredlistofRes(searchList);
     }
-    return  filteredlistofRes.length === 0 ? (<Shimmer />) : (
+    return  filteredlistofRes.length === 0 && foodcarousel.length === 0 ? (<Shimmer />) : (
         <div className="body" >
             <div className="search" >
               <input className="search-box" value={searchText} onChange={searchType} ></input>
@@ -50,12 +54,25 @@ const Body = () => {
                 Home
               </button>
             </div>
-            <div className="res-container">
+            <div className="food-carousel-container" >
+              <h2> What are you looking for?.. </h2>
+              <div className="food-carousel" >
+                {
+                  foodcarousel.map((item)=>(
+                    <Foodcarousel key = { item?.id } itemsdata = {item} />
+                  ))
+                }
+              </div>
+            </div>
+            <div className="resCards" >
+              <h2>Restaurants Nearby..</h2>
+              <div className="res-container">
                 { 
                   filteredlistofRes.map((restaurant) => (
-                  <Restaurantcard key={restaurant?.info?.id} resdata={restaurant}/>
+                  <Link key={restaurant?.info?.id} to={"/restaurants/"+restaurant?.info?.id}><Restaurantcard  resdata={restaurant}/></Link>
                   ))
                 }   
+            </div>
             </div>
             <div className="MoreRes-btn">
               <button  > 
