@@ -208,3 +208,9 @@
 {
     transition: 1s;
 }
+.User-info-container
+{
+    padding: 5px;
+    margin: 10px;
+    border: solid black 2px;
+}
