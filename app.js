@@ -5,7 +5,6 @@ import Body from "./src/components/Body";
 import Contact from "./src/components/Contact";
 import  Error  from "./src/components/Error";
 import  About from "./src/components/About"; 
-import Grocery from "./src/components/Grocery"
 import RestaurantMenu from "./src/components/RestaurantMenu";
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom"; 
 import { lazy,Suspense } from "react";
