@@ -47,7 +47,7 @@ const Body = () => {
               </button>
             </div>
             <div className="ml-[150px]" >
-              <h2 className="text-xl"> What are you looking for?.. </h2>
+              <h2 className="text-3xl text-black solid my-[10px]"> What are you looking for?.. </h2>
               <div className="flex flex-wrap " >
                 {
                   foodcarousel.map((item)=>(
@@ -57,7 +57,7 @@ const Body = () => {
               </div>
             </div>
             <div className="mx-[150px] " >
-              <h2 className="text-xl text-black solid my-[10px]">Restaurants Nearby..</h2>
+              <h2 className="text-3xl text-black solid my-[10px]">Restaurants Nearby..</h2>
               <div className=" flex flex-wrap ">
                 { 
                   filteredlistofRes.map((restaurant) => (
