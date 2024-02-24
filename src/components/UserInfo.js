@@ -1,4 +1,5 @@
 import React from "react";
+
 class UserInfo extends React.Component{
     constructor(props)
     {
@@ -21,7 +22,6 @@ class UserInfo extends React.Component{
     }
     render()
     {
-
         const {count} = this.state;
         const { login,avatar_url, name,bio  } = this.state.UserDetails;
         return (
