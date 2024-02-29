@@ -9,9 +9,9 @@ const RestaurantMenu = () => {
     const [showIndex,setShowIndex]= useState(null);
 
     if(resInfo.length === 0 )    return  (<Shimmer/>) ;
-    const { name,cuisines } = resInfo?.cards[2]?.card?.card?.info;
+    const { name,cuisines } = resInfo?.cards[0]?.card?.card?.info;
     //filters all cards to get json of items categories
-    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
         (c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" );
     return  (
         <div className="text-center">

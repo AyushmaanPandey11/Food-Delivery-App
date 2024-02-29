@@ -3,12 +3,20 @@ import { useState, useEffect } from "react";
 const useListofRes = () => {
     const [originalList,setoriginalList] = useState([]);  
     const [filteredlistofRes, setfilteredlistofRes] = useState([]);
-    useEffect( async () => {
-        const data = await fetch(SWIGGY_API);
-        const json = await data.json();
-        setoriginalList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setfilteredlistofRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    },[]);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const data = await fetch(SWIGGY_API);
+                const json = await data.json();
+                setoriginalList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+                setfilteredlistofRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+        fetchData(); 
+    }, []);
+    
     return [originalList,setoriginalList,filteredlistofRes,setfilteredlistofRes];
 };
 export default useListofRes;
