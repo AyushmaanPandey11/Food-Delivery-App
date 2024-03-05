@@ -20,4 +20,4 @@ const useFoodCarousel = () => {
     
     return [foodcarousel,setfoodcarousel];
 };
-export default useFoodCarousel;
+export default useFoodCarousel;``

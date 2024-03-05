@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Contact from "./src/components/Contact";
 import  Error  from "./src/components/Error";
-import RestaurantMenu from "./src/components/RestaurantMenu"
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom"; 
 import { lazy,Suspense } from "react";
 import Shimmer from "./src/components/Shimmer";
@@ -13,7 +12,7 @@ import { Provider } from "react-redux";
 const Grocery = lazy( () => import("./src/components/Grocery") );
 const Body = lazy( () => import("./src/components/Body") );
 const About = lazy( () => import("./src/components/About") );
-//const RestaurantMenu = lazy( () => import("./src/components/RestaurantMenu") );
+const RestaurantMenu = lazy( () => import("./src/components/RestaurantMenu") );
 const Cart = lazy(()=>import("./src/components/Cart"));
 // main div tag 
 const AppLayout = () =>
@@ -43,7 +42,7 @@ const AppRouter = createBrowserRouter( [
         children: [
             {
                 path: "/" ,
-                element: <Body />,
+                element: <Suspense fallback={<Shimmer/>}><Body /></Suspense>,
                 errorElement: <Error />,
             },
             {
@@ -66,7 +65,7 @@ const AppRouter = createBrowserRouter( [
             },
             {
                 path: "/restaurants/:resId",
-                element : <RestaurantMenu />
+                element : <Suspense fallback={<Shimmer/>} ><RestaurantMenu /></Suspense>
             },
             {
                 path: "/cart",

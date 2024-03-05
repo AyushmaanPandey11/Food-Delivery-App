@@ -32,7 +32,7 @@ const Body = () => {
       )
       setfilteredlistofRes(searchList);
     }
-    return  filteredlistofRes.length === 0  ? (<Shimmer />) : (
+    return  (filteredlistofRes.length === 0 || foodcarousel.length === 0)  ? (<Shimmer />) : (
         <div className="body" >
             <div className="mx-5" >
               <input className="border-solid border-black border h-7 mr-3" value={searchText} onChange={searchType} ></input>
