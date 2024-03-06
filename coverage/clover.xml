@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1709743578888" clover="3.2.0">
-  <project timestamp="1709743578889" name="All files">
-    <metrics statements="44" coveredstatements="35" conditionals="4" coveredconditionals="3" methods="15" coveredmethods="8" elements="63" coveredelements="46" complexity="0" loc="44" ncloc="44" packages="2" files="10" classes="10"/>
+<coverage generated="1709749058535" clover="3.2.0">
+  <project timestamp="1709749058535" name="All files">
+    <metrics statements="44" coveredstatements="37" conditionals="4" coveredconditionals="3" methods="15" coveredmethods="10" elements="63" coveredelements="50" complexity="0" loc="44" ncloc="44" packages="2" files="10" classes="10"/>
     <package name="components">
-      <metrics statements="18" coveredstatements="16" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="6"/>
+      <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="8"/>
       <file name="Contact.js" path="D:\Projects\Front-end\React\src\components\Contact.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -20,14 +20,14 @@
         <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="Restaurantcard.js" path="D:\Projects\Front-end\React\src\components\Restaurantcard.js">
-        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
       </file>
       <file name="sum.js" path="D:\Projects\Front-end\React\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
