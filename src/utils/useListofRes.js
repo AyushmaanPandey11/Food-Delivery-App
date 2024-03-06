@@ -8,8 +8,8 @@ const useListofRes = () => {
             try {
                 const data = await fetch(SWIGGY_API);
                 const json = await data.json();
-                setoriginalList(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-                setfilteredlistofRes(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+                setoriginalList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+                setfilteredlistofRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }

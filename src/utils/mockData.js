@@ -1,5 +1,5 @@
 // Zomato Api for food restaurant
-const cardobj = [{
+export const cardobj = [{
     info: {
       id: "65483",
       name: "Istah - The Mediterranean Way",
@@ -935,4 +935,96 @@ const cardobj = [{
       "type": "WEBLINK"
     }
   }];
-export default cardobj;
+
+export const mock = {
+  "info": {
+    "id": "160226",
+    "name": "The Red Box",
+    "cloudinaryImageId": "h5yqzwz0cxyhb81sjk7s",
+    "locality": "Heritage Town",
+    "areaName": "Puducherry",
+    "costForTwo": "₹400 for two",
+    "cuisines": [
+      "Chinese"
+    ],
+    "avgRating": 4.4,
+    "parentId": "1636",
+    "avgRatingString": "4.4",
+    "totalRatingsString": "5K+",
+    "sla": {
+      "deliveryTime": 43,
+      "lastMileTravel": 13,
+      "serviceability": "SERVICEABLE",
+      "slaString": "43 mins",
+      "lastMileTravelString": "13.0 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-03-06 23:30:00",
+      "opened": true
+    },
+    "badges": {
+      
+    },
+    "isOpen": true,
+    "aggregatedDiscountInfoV2": {
+      
+    },
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {
+          
+        },
+        "textBased": {
+          
+        },
+        "textExtendedBadges": {
+          
+        }
+      }
+    },
+    "orderabilityCommunication": {
+      "title": {
+        
+      },
+      "subTitle": {
+        
+      },
+      "message": {
+        
+      },
+      "customIcon": {
+        
+      }
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {
+          
+        },
+        "video": {
+          
+        }
+      }
+    },
+    "reviewsSummary": {
+      
+    },
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {
+      
+    }
+  },
+  "analytics": {
+    "context": "seo-data-8e4b9206-bf06-42c3-8363-25f114e60824"
+  },
+  "cta": {
+    "link": "https://www.swiggy.com/restaurants/the-red-box-heritage-town-puducherry-pondicherry-160226",
+    "text": "RESTAURANT_MENU",
+    "type": "WEBLINK"
+  },
+  "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+};
