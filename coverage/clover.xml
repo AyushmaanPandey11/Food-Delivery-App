@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1709813622570" clover="3.2.0">
-  <project timestamp="1709813622570" name="All files">
-    <metrics statements="134" coveredstatements="127" conditionals="22" coveredconditionals="18" methods="50" coveredmethods="46" elements="206" coveredelements="191" complexity="0" loc="134" ncloc="134" packages="2" files="20" classes="20"/>
+<coverage generated="1709849839946" clover="3.2.0">
+  <project timestamp="1709849839947" name="All files">
+    <metrics statements="137" coveredstatements="128" conditionals="22" coveredconditionals="18" methods="52" coveredmethods="46" elements="211" coveredelements="192" complexity="0" loc="137" ncloc="137" packages="2" files="20" classes="20"/>
     <package name="components">
-      <metrics statements="75" coveredstatements="74" conditionals="22" coveredconditionals="18" methods="34" coveredmethods="33"/>
-      <file name="Body.js" path="D:\Projects\Front-end\React\src\components\Body.js">
+      <metrics statements="78" coveredstatements="75" conditionals="22" coveredconditionals="18" methods="36" coveredmethods="33"/>
+      <file name="Body.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Body.js">
         <metrics statements="21" coveredstatements="20" conditionals="6" coveredconditionals="4" methods="10" coveredmethods="9"/>
         <line num="9" count="2" type="stmt"/>
         <line num="11" count="14" type="stmt"/>
@@ -28,22 +28,25 @@
         <line num="62" count="208" type="stmt"/>
         <line num="73" count="101" type="stmt"/>
       </file>
-      <file name="Cart.js" path="D:\Projects\Front-end\React\src\components\Cart.js">
-        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <file name="Cart.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Cart.js">
+        <metrics statements="10" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="5" type="stmt"/>
         <line num="7" count="5" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="10" count="5" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
       </file>
-      <file name="Contact.js" path="D:\Projects\Front-end\React\src\components\Contact.js">
+      <file name="Contact.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Contact.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
       </file>
-      <file name="Foodcarousel.js" path="D:\Projects\Front-end\React\src\components\Foodcarousel.js">
+      <file name="Foodcarousel.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Foodcarousel.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="208" type="stmt"/>
@@ -51,7 +54,7 @@
         <line num="5" count="208" type="stmt"/>
         <line num="6" count="208" type="stmt"/>
       </file>
-      <file name="Header.js" path="D:\Projects\Front-end\React\src\components\Header.js">
+      <file name="Header.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Header.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="11" type="stmt"/>
@@ -61,7 +64,7 @@
         <line num="13" count="11" type="stmt"/>
         <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
       </file>
-      <file name="ItemList.js" path="D:\Projects\Front-end\React\src\components\ItemList.js">
+      <file name="ItemList.js" path="D:\Projects\Front-end\Food Delivery App\src\components\ItemList.js">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="7" type="stmt"/>
@@ -71,14 +74,14 @@
         <line num="14" count="40" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
       </file>
-      <file name="RestaurantCategory.js" path="D:\Projects\Front-end\React\src\components\RestaurantCategory.js">
+      <file name="RestaurantCategory.js" path="D:\Projects\Front-end\Food Delivery App\src\components\RestaurantCategory.js">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="48" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="8" count="48" type="stmt"/>
       </file>
-      <file name="RestaurantMenu.js" path="D:\Projects\Front-end\React\src\components\RestaurantMenu.js">
+      <file name="RestaurantMenu.js" path="D:\Projects\Front-end\Food Delivery App\src\components\RestaurantMenu.js">
         <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="8" type="stmt"/>
@@ -92,7 +95,7 @@
         <line num="22" count="48" type="stmt"/>
         <line num="26" count="4" type="cond" truecount="2" falsecount="0"/>
       </file>
-      <file name="Restaurantcard.js" path="D:\Projects\Front-end\React\src\components\Restaurantcard.js">
+      <file name="Restaurantcard.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Restaurantcard.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="3" count="3" type="stmt"/>
         <line num="4" count="103" type="stmt"/>
@@ -102,12 +105,12 @@
         <line num="25" count="15" type="stmt"/>
         <line num="26" count="50" type="stmt"/>
       </file>
-      <file name="Shimmer.js" path="D:\Projects\Front-end\React\src\components\Shimmer.js">
+      <file name="Shimmer.js" path="D:\Projects\Front-end\Food Delivery App\src\components\Shimmer.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
       </file>
-      <file name="sum.js" path="D:\Projects\Front-end\React\src\components\sum.js">
+      <file name="sum.js" path="D:\Projects\Front-end\Food Delivery App\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -115,15 +118,15 @@
     </package>
     <package name="utils">
       <metrics statements="59" coveredstatements="53" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="13"/>
-      <file name="UserContext.js" path="D:\Projects\Front-end\React\src\utils\UserContext.js">
+      <file name="UserContext.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\UserContext.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="4" type="stmt"/>
       </file>
-      <file name="appStore.js" path="D:\Projects\Front-end\React\src\utils\appStore.js">
+      <file name="appStore.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\appStore.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
       </file>
-      <file name="cartSlice.js" path="D:\Projects\Front-end\React\src\utils\cartSlice.js">
+      <file name="cartSlice.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\cartSlice.js">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
@@ -131,7 +134,7 @@
         <line num="19" count="1" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
       </file>
-      <file name="constants.js" path="D:\Projects\Front-end\React\src\utils\constants.js">
+      <file name="constants.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\constants.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
@@ -141,12 +144,12 @@
         <line num="8" count="5" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
       </file>
-      <file name="mockData.js" path="D:\Projects\Front-end\React\src\utils\mockData.js">
+      <file name="mockData.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\mockData.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="3" type="stmt"/>
         <line num="200" count="3" type="stmt"/>
       </file>
-      <file name="useFoodCarousel.js" path="D:\Projects\Front-end\React\src\utils\useFoodCarousel.js">
+      <file name="useFoodCarousel.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\useFoodCarousel.js">
         <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="14" type="stmt"/>
@@ -161,7 +164,7 @@
         <line num="22" count="14" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
       </file>
-      <file name="useListofRes.js" path="D:\Projects\Front-end\React\src\utils\useListofRes.js">
+      <file name="useListofRes.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\useListofRes.js">
         <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="14" type="stmt"/>
@@ -176,7 +179,7 @@
         <line num="19" count="4" type="stmt"/>
         <line num="22" count="14" type="stmt"/>
       </file>
-      <file name="useOnlineStatus.js" path="D:\Projects\Front-end\React\src\utils\useOnlineStatus.js">
+      <file name="useOnlineStatus.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\useOnlineStatus.js">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
@@ -187,7 +190,7 @@
         <line num="9" count="0" type="stmt"/>
         <line num="12" count="11" type="stmt"/>
       </file>
-      <file name="useRestauranMenu.js" path="D:\Projects\Front-end\React\src\utils\useRestauranMenu.js">
+      <file name="useRestauranMenu.js" path="D:\Projects\Front-end\Food Delivery App\src\utils\useRestauranMenu.js">
         <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
