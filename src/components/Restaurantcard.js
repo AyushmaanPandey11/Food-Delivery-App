@@ -4,10 +4,10 @@ const Restaurentcard = (prop) => {
     const { resdata } = prop;
     const { cloudinaryImageId, name, cuisines, avgRating,costForTwo,locality } = resdata?.info;
       return (
-          <div className=" shadow-lg m-5 py-4 px-3 h-[550px] w-[270px] bg-gray-300 flex-wrap " >
+          <div data-testid="rescards" className=" shadow-lg m-5 py-4 px-3 h-[550px] w-[270px] bg-gray-300 flex-wrap " >
                 <img className="rounded-md border-solid border-black w-[250] h-[250]" alt="restaurent logo" 
                   src={ CDN_URL + cloudinaryImageId}/> 
-                <div className="flex flex-wrap my-2 py-2 text-base ">
+                <div className="flex flex-wrap my-3 py-2 text-base ">
                     <h3 className="py-[5px] text-xl solid " >{name}</h3>
                     <h4 className="py-[5px]">{"Cuisines: "+ cuisines.join(", ")}</h4>
                     <h4 className="py-[5px]">{locality}</h4>

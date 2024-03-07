@@ -4,7 +4,7 @@ const Foodcarousel = (props) => {
     const {imageId} = itemsdata;
     const text = itemsdata?.text;
     return (
-        <div className="w-[150px] h-[150px] my-5" >
+        <div data-testid="carousel" className="w-[150px] h-[150px] my-5" >
             <img src={ CAROUSEL_URL + imageId } alt={text} /> 
         </div>
     );

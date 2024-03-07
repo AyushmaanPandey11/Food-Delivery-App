@@ -7,12 +7,11 @@ const ItemList = ({items}) => {
     const handleAdditems = (item) => {
         
         dispatch(addItems(item));
-        console.log("data dis[atched")
     };
     return (
         <div > 
             { items.map( (item) => (
-                <div key = { item?.card?.info?.id } className="m-2 p-2 text-left flex border-gray-200 border-b-4 justify-between">
+                <div data-testid="foodItems" key = { item?.card?.info?.id } className="m-2 p-2 text-left flex border-gray-200 border-b-4 justify-between">
                     <div className="w-8/12  " >
                         <div className="py-2 solid font-bold">
                             <span> {item.card.info.name} </span>
