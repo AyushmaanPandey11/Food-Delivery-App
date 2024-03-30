@@ -9,23 +9,26 @@ const RestaurantMenu = () => {
     const [showIndex,setShowIndex]= useState(null);
 
     if(resInfo.length === 0 )    return  (<Shimmer/>) ;
-    const { name,cuisines } = resInfo?.cards[0]?.card?.card?.info;
+    const { text } = resInfo?.cards[0]?.card?.card;
     //filters all cards to get json of items categories
-    const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
         (c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" );
     return  (
         <div className="text-center">
-            <h1 className="font-bold my-6 text-2xl">{name}</h1>
-            <h3 className="my-6">{cuisines.join(", ")}</h3>
+            <h1 className="font-bold my-6 text-2xl">{text}</h1>
+            {/* <h3 className="my-6">{cuisines.join(", ")}</h3> */}
             <h1 className=" md-6 font-bold text-xl">MENU</h1>
             {
-                categories.map( (category,index) => <RestaurantCategory 
-                key= {category?.card?.card?.title}
-                data={category?.card?.card}
-                showItems = { index === showIndex }
-                setShowIndex = { () => setShowIndex(index === showIndex ? null : index) }
-                /> )
+                categories && categories.map((category, index) => (
+                    <RestaurantCategory 
+                        key={category?.card?.card?.title}
+                        data={category?.card?.card}
+                        showItems={index === showIndex}
+                        setShowIndex={() => setShowIndex(index === showIndex ? null : index)}
+                    />
+                ))
             }
+
         </div>
     )
 };
