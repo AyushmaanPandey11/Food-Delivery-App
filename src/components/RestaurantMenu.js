@@ -1,11 +1,13 @@
 import {useState} from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import UseRestaurantMenu from "../utils/useRestauranMenu";
+import UseRestaurantMenu from "../hooks/useRestauranMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useSelector } from "react-redux";
 const RestaurantMenu = () => {
     const {resId} = useParams();
-    const resInfo = UseRestaurantMenu(resId);
+    const resInfo = useSelector((store)=>store?.ResMenu?.items);
+    UseRestaurantMenu(resId);
     const [showIndex,setShowIndex]= useState(null);
 
     if(resInfo.length === 0 )    return  (<Shimmer/>) ;

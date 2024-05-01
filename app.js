@@ -7,7 +7,7 @@ import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy,Suspense } from "react";
 import Shimmer from "./src/components/Shimmer";
 import UserContext from "./src/utils/UserContext";
-import appStore from "./src/utils/appStore";
+import appStore from "./src/utils/redux/appStore";
 import { Provider } from "react-redux";
 const Grocery = lazy( () => import("./src/components/Grocery") );
 const Body = lazy( () => import("./src/components/Body") );

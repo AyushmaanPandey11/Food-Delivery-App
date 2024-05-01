@@ -3,16 +3,24 @@ import Foodcarousel from "./Foodcarousel";
 import { useState, useContext} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import useListofRes from "../utils/useListofRes";
-import useFoodCarousel from "../utils/useFoodCarousel";
+import useListofRes from "../hooks/useListofRes";
+import useFoodCarousel from "../hooks/useFoodCarousel";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+import { mock } from "../utils/mockData";
 const Body = () => {
     // state variables
-    const [originalList,setoriginalList,filteredlistofRes, setfilteredlistofRes] = useListofRes();
-    const [foodcarousel,setfoodcarousel] = useFoodCarousel();
+    
+    const originalList = useSelector((store)=>store?.ResAndCarousel?.restaurants);
+    const [filteredlistofRes,setfilteredlistofRes] = useState(useSelector((store)=>store?.ResAndCarousel?.restaurants));
+    const foodcarousel = useSelector((store)=>store?.ResAndCarousel?.carousels);
     const [searchText, setsearchText] = useState('');
     const QuickDelRestaurant = WithQuickDelivery(Restaurantcard);
     const {LoggedInUser,setUserName} = useContext(UserContext);
+    useListofRes();
+    useFoodCarousel();
+    console.log(originalList);
+    console.log(mock);
     // reset button 
     const resetList = () => {
       setfilteredlistofRes(originalList);
@@ -32,7 +40,7 @@ const Body = () => {
       )
       setfilteredlistofRes(searchList);
     }
-    return  ( filteredlistofRes.length === 0 &&  foodcarousel.length === 0)  ? (<Shimmer />) : (
+    return  ( !filteredlistofRes && !foodcarousel)  ? (<Shimmer />) : (
         <div className="body" >
             <div className="mx-5" >
               <input data-testid="searchInput" className="border-solid border-black border h-7 mr-3" value={searchText} onChange={searchType} ></input>

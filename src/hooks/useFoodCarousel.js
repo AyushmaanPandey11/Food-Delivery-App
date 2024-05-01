@@ -1,14 +1,16 @@
-import { useState,useEffect } from "react";
+import { useEffect } from "react";
 import { SWIGGY_API } from "../utils/constants";
-import {mockCarousel} from "../utils/mockData";
+import { useDispatch } from "react-redux";
+import { addCarouselItems } from "../utils/redux/mainPageSlice";
 const useFoodCarousel = () => {
-    const [foodcarousel,setfoodcarousel] = useState(mockCarousel);
+    const dispatch = useDispatch();
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const data =  await fetch(SWIGGY_API);
                 const json = await data.json();
-                setfoodcarousel(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info);
+                const carousels=json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info;
+                dispatch(addCarouselItems(carousels));
             } catch (error) {
                 
                 console.error("Error fetching data:", error);
@@ -18,7 +20,5 @@ const useFoodCarousel = () => {
         fetchData();
         
     }, []);
-    
-    return [foodcarousel,setfoodcarousel];
 };
 export default useFoodCarousel;``
