@@ -19,8 +19,6 @@ const Body = () => {
     const {LoggedInUser,setUserName} = useContext(UserContext);
     useListofRes();
     useFoodCarousel();
-    console.log(originalList);
-    console.log(mock);
     // reset button 
     const resetList = () => {
       setfilteredlistofRes(originalList);
@@ -77,7 +75,7 @@ const Body = () => {
               <h2 className="text-3xl text-black solid my-[10px]">Restaurants Nearby..</h2>
               <div data-testid="resCard"className=" flex flex-wrap ">
                 { 
-                  filteredlistofRes.map((restaurant) => (
+                  originalList.map((restaurant) => (
                   <Link key={restaurant?.info?.id} to={"/restaurants/"+restaurant?.info?.id}>
                     {restaurant?.info?.sla?.deliveryTime <= 35 ? <QuickDelRestaurant resdata={restaurant}/> : <Restaurantcard  resdata={restaurant}/>}
                     </Link>
