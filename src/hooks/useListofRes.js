@@ -1,9 +1,11 @@
 import { SWIGGY_API } from "../utils/constants";
 import {  useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addResItems } from "../utils/redux/mainPageSlice";
 const useListofRes = () => {
     const dispatch = useDispatch();
+    const originalList = useSelector((store)=>store?.ResAndCarousel?.restaurants);
+    const filteredlistofRes = useSelector((store)=>store?.ResAndCarousel?.restaurants);
     useEffect(() => {
         async function fetchData() {
             try {
@@ -16,6 +18,6 @@ const useListofRes = () => {
             }
         }
         fetchData(); 
-    }, []);
+    }, [originalList,filteredlistofRes]);
 };
 export default useListofRes;

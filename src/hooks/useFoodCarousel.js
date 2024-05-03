@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { SWIGGY_API } from "../utils/constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addCarouselItems } from "../utils/redux/mainPageSlice";
 const useFoodCarousel = () => {
     const dispatch = useDispatch();
+    const foodcarousel = useSelector((store)=>store?.ResAndCarousel?.carousels);
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -16,9 +17,7 @@ const useFoodCarousel = () => {
                 console.error("Error fetching data:", error);
             }
         };
-        
-        fetchData();
-        
-    }, []);
+        fetchData(); 
+    }, [foodcarousel]);
 };
-export default useFoodCarousel;``
+export default useFoodCarousel;

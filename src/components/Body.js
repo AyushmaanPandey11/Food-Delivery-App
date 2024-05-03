@@ -10,15 +10,15 @@ import { useSelector } from "react-redux";
 import { mock } from "../utils/mockData";
 const Body = () => {
     // state variables
-    
+    useListofRes();
+    useFoodCarousel(); 
     const originalList = useSelector((store)=>store?.ResAndCarousel?.restaurants);
     const [filteredlistofRes,setfilteredlistofRes] = useState(useSelector((store)=>store?.ResAndCarousel?.restaurants));
     const foodcarousel = useSelector((store)=>store?.ResAndCarousel?.carousels);
     const [searchText, setsearchText] = useState('');
     const QuickDelRestaurant = WithQuickDelivery(Restaurantcard);
     const {LoggedInUser,setUserName} = useContext(UserContext);
-    useListofRes();
-    useFoodCarousel();
+    
     // reset button 
     const resetList = () => {
       setfilteredlistofRes(originalList);
@@ -75,7 +75,7 @@ const Body = () => {
               <h2 className="text-3xl text-black solid my-[10px]">Restaurants Nearby..</h2>
               <div data-testid="resCard"className=" flex flex-wrap ">
                 { 
-                  originalList.map((restaurant) => (
+                  filteredlistofRes.map((restaurant) => (
                   <Link key={restaurant?.info?.id} to={"/restaurants/"+restaurant?.info?.id}>
                     {restaurant?.info?.sla?.deliveryTime <= 35 ? <QuickDelRestaurant resdata={restaurant}/> : <Restaurantcard  resdata={restaurant}/>}
                     </Link>
