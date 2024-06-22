@@ -6,7 +6,7 @@ import RestaurantCategory from "./RestaurantCategory";
 import { useSelector } from "react-redux";
 const RestaurantMenu = () => {
     const {resId} = useParams();
-    const resInfo = useSelector((store)=>store?.ResMenu?.items);
+    const resInfo = useSelector((store)=>store?.ResCarouselMenu?.ResItems);
     UseRestaurantMenu(resId);
     const [showIndex,setShowIndex]= useState(null);
 
@@ -15,6 +15,7 @@ const RestaurantMenu = () => {
     //filters all cards to get json of items categories
     const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
         (c) => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" );
+    
     return  (
         <div className="text-center">
             <h1 className="font-bold my-6 text-2xl">{text}</h1>

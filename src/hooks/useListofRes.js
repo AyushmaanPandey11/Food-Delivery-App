@@ -18,6 +18,6 @@ const useListofRes = () => {
             }
         }
         fetchData(); 
-    }, [originalList,filteredlistofRes]);
+    }, []);
 };
 export default useListofRes;

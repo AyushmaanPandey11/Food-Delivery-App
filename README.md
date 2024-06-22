@@ -17,11 +17,14 @@ I have started Learning react by Building this Project. What all there is in thi
     - Unit Testing
     - Automation Testing
 - Redux Store
+    - Store Data of carousels and restaurants to the store 
+    - Stores data of selected restuarant in the store to show its menu.
 - React-router-dom
 - Swiggy Api Fetching 
     - Home Page
     - Restaurnat Menu
     - Itemlist
+    - Carousel Menu 
 - Hooks
     - UseState
     - UseEffect

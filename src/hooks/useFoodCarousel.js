@@ -18,6 +18,6 @@ const useFoodCarousel = () => {
             }
         };
         fetchData(); 
-    }, [foodcarousel]);
+    }, []);
 };
 export default useFoodCarousel;

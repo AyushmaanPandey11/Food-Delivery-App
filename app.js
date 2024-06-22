@@ -9,6 +9,7 @@ import Shimmer from "./src/components/Shimmer";
 import UserContext from "./src/utils/UserContext";
 import appStore from "./src/utils/redux/appStore";
 import { Provider } from "react-redux";
+import CarouselMenu from "./src/components/CarouselMenu";
 const Grocery = lazy( () => import("./src/components/Grocery") );
 const Body = lazy( () => import("./src/components/Body") );
 const About = lazy( () => import("./src/components/About") );
@@ -71,6 +72,10 @@ const AppRouter = createBrowserRouter( [
                 path: "/cart",
                 element : <Suspense fallback={<Shimmer/>} ><Cart /></Suspense>
             },
+            {
+                path: "/carousels/:carId",
+                element : <Suspense fallback={<Shimmer />} ><CarouselMenu /></Suspense>,
+            }
         ],
         errorElement: <Error />,
     },

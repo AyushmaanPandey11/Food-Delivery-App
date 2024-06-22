@@ -5,7 +5,7 @@ import ResAndCarouselReducer from "./mainPageSlice";
 const appStore = configureStore({
     reducer:{
         cart : cartReducer,
-        ResMenu : ResMenuReducer,
+        ResCarouselMenu : ResMenuReducer,
         ResAndCarousel: ResAndCarouselReducer,
     },
 });
