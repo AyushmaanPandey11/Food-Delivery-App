@@ -33,7 +33,7 @@ const CarouselMenu = () => {
             <div className="flex flex-wrap justify-center mt-4 -ml-24">
                 {
                     carInfo && restaurants.map((restaurant) => (
-                        <Link key={restaurant?.info?.id} to={"/restaurants/" + restaurant?.card?.card?.info?.id}>
+                        <Link key={restaurant?.card?.card?.info?.id} to={"/restaurants/" + restaurant?.card?.card?.info?.id}>
                             {restaurant?.info?.sla?.deliveryTime <= 35 ? 
                                 <QuickDelRestaurant resdata={restaurant?.card?.card} /> : 
                                 <Restaurantcard resdata={restaurant?.card?.card} />}
