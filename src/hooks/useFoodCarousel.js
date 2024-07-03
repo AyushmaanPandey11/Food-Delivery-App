@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCarouselItems } from "../utils/redux/mainPageSlice";
 const useFoodCarousel = () => {
     const dispatch = useDispatch();
-    const foodcarousel = useSelector((store)=>store?.ResAndCarousel?.carousels);
     useEffect(() => {
         const fetchData = async () => {
             try {
